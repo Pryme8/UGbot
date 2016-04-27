@@ -8,3 +8,36 @@
     border: 1px solid #fff;
     z-index: 100;
 }
+.toggle {
+    position: relative;
+	cursor:pointer;
+}
+.toggle::after {
+    position: absolute;
+    display: block;
+    content: '';
+    border: 1px solid #333;
+    width: 1em;
+    height: 1em;
+    right: 2px;
+    top: 50%;
+    transform: translate(0 , -50%);
+}
+.toggle::before {
+    position: relative;
+    display: block;
+    content: attr(name);
+    padding: 0.2em;
+    border: 1px solid black;
+}
+.toggle:hover:before{
+background:rgba(0,0,0,0.5);
+border: 1px solid #aaa;
+}
+.toggle:active:before{
+background:rgba(255,255,255,0.5);
+border: 1px solid #555;
+}
+.toggle.on:after{
+content:'X';
+}
