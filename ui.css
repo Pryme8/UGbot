@@ -55,6 +55,6 @@ content:'X';
     color: #fff;
 }
 
-#current-position {
+.smaller {
     font-size: 0.8em;
 }
